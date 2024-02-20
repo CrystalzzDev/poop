@@ -1,12 +1,13 @@
--- not encrypted cuz u need to change ur name <3
-function pooperwoo() -- Pooper.poop 
-	local script = Instance.new('Script', workspace) -- do not change dis my luv, its for ss
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local function IDUFNY_fake_script() -- ScreenGui.Script 
+	local script = Instance.new('Script', ScreenGui)
 
 	while true do
+		task.wait(5) -- 5 secs min 10 max, the server can't create too fast
 		local player = game.Players -- put in ur name after "Players.urname"
 		local character = player.Character
 		local rootPart = character:WaitForChild("HumanoidRootPart")
-		wait(2)
 		local part = Instance.new("Part", workspace)
 		part.Name = "Poop"
 		part.Anchored = false
@@ -14,6 +15,20 @@ function pooperwoo() -- Pooper.poop
 		part.Shape = Enum.PartType.Ball
 		part.Size = Vector3.new(2,2,2)
 		part.BrickColor = BrickColor.new("Brown")
+		local part1 = Instance.new("Part", workspace)
+		part1.Name = "Poop"
+		part1.Anchored = false
+		part1.Position = rootPart.CFrame * Vector3.new(0, -2, 3)
+		part1.Shape = Enum.PartType.Ball
+		part1.Size = Vector3.new(2,2,2)
+		part1.BrickColor = BrickColor.new("Brown")
+		local part2 = Instance.new("Part", workspace)
+		part2.Name = "Poop"
+		part2.Anchored = false
+		part2.Position = rootPart.CFrame * Vector3.new(0, -4, 3)
+		part2.Shape = Enum.PartType.Ball
+		part2.Size = Vector3.new(2,2,2)
+		part2.BrickColor = BrickColor.new("Brown")
 	end
 end
-pooperwoo()
+coroutine.wrap(IDUFNY_fake_script)()
