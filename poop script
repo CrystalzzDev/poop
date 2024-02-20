@@ -1,0 +1,19 @@
+-- not encrypted cuz u need to change ur name <3
+function pooperwoo() -- Pooper.poop 
+	local script = Instance.new('Script', workspace) -- do not change dis my luv, its for ss
+
+	while true do
+		local player = game.Players -- put in ur name after "Players.urname"
+		local character = player.Character
+		local rootPart = character:WaitForChild("HumanoidRootPart")
+		wait(2)
+		local part = Instance.new("Part", workspace)
+		part.Name = "Poop"
+		part.Anchored = false
+		part.Position = rootPart.CFrame * Vector3.new(0, -3, 3)
+		part.Shape = Enum.PartType.Ball
+		part.Size = Vector3.new(2,2,2)
+		part.BrickColor = BrickColor.new("Brown")
+	end
+end
+pooperwoo()
